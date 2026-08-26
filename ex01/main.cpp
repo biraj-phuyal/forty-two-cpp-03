@@ -1,9 +1,13 @@
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void) {
     ClapTrap biraj("Biraj");
     ClapTrap copy(biraj);
     ClapTrap assigned;
+    ScavTrap serena("Serena");
+    ScavTrap copyScav(serena);
+    ScavTrap get;
 
     assigned = copy;
     biraj.attack("a training dummy");
@@ -18,6 +22,18 @@ int main(void) {
     ClapTrap john("John");
     for (int i = 0; i < 11; i++)
         john.attack("a target");
+
+    serena.attack("an intruder");
+    serena.takeDamage(30);
+    serena.beRepaired(10);
+    serena.guardGate(); 
+
+    get = copyScav;
+    for (int i = 0; i < 11; i++)
+        serena.attack("a villan");
+    serena.beRepaired(10);
+    serena.takeDamage(30);
+    serena.guardGate();
 
     return 0;
 }
