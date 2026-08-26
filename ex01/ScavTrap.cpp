@@ -1,6 +1,5 @@
 #include "ScavTrap.hpp"
 
-#include <iostream>
 
 ScavTrap::ScavTrap(void) : name("default"), hit_points(10), energy_points(10), attack_damage(0) {
     std::cout << "ScavTrap " << this->name << " default constructor called" << std::endl;

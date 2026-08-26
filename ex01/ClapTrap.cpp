@@ -10,7 +10,8 @@ ClapTrap::ClapTrap(const std::string& name) : name(name), hit_points(10), energy
     std::cout << "ClapTrap " << this->name << " constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& src) : name(src.name), hit_points(src.hit_points), energy_points(src.energy_points), attack_damage(src.attack_damage) {
+ClapTrap::ClapTrap(const ClapTrap& src) : name(src.name), hit_points(src.hit_points), energy_points(src.energy_points),
+                                        attack_damage(src.attack_damage) {
     std::cout << "ClapTrap " << this->name << " copy constructor called" << std::endl;
 }
 
@@ -42,7 +43,8 @@ void    ClapTrap::attack(const std::string& target) {
         return;
     }
     this->energy_points--;
-    std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->attack_damage << " points of damage!" << std::endl;
+    std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->attack_damage 
+              << " points of damage!" << std::endl;
 }
 
 void    ClapTrap::takeDamage(unsigned int amount) {
