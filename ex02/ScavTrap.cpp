@@ -5,7 +5,7 @@ ScavTrap::ScavTrap(void) : ClapTrap() {
     hit_points = 100;
     energy_points = 50;
     attack_damage = 20;
-    std::cout << "ScavTrap " << name << "default constructor called" << std::endl;
+    std::cout << "ScavTrap " << name << " default constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
@@ -16,7 +16,7 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
 }
 
 ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src) {
-    std::cout << "ScavTrap " << name << "copy constructor called" << std::endl;
+    std::cout << "ScavTrap " << name << " copy constructor called" << std::endl;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& src) {
@@ -46,5 +46,5 @@ void    ScavTrap::attack(const std::string& target) {
 }
 
 void    ScavTrap::guardGate(void) {
-    std::cout << "ScavTrap " << "is now in Gate keeper mode" << std::endl;
+    std::cout << "ScavTrap " << name << " is now in Gate keeper mode" << std::endl;
 }
