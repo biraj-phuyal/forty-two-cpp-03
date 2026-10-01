@@ -10,10 +10,10 @@ int main(void) {
     biraj.takeDamage(4);
     biraj.beRepaired(2);
 
-    ClapTrap destroyed("Destroyed");
-    destroyed.takeDamage(20);
-    destroyed.attack("nobody");
-    destroyed.beRepaired(10);
+    ClapTrap someone("someone");
+    someone.takeDamage(20);
+    someone.attack("nobody");
+    someone.beRepaired(10);
 
     ClapTrap john("John");
     for (int i = 0; i < 11; i++)
