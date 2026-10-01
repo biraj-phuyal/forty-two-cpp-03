@@ -72,8 +72,6 @@ void    ClapTrap::beRepaired(unsigned int amount) {
         return;
     }
     this->energy_points--;
-    if (amount > UINT_MAX - this->hit_points)
-        amount = UINT_MAX - this->hit_points;
     this->hit_points += amount;
     std::cout << "ClapTrap " << this->name << " repairs itself for " << amount << " hit points!" << std::endl;
 }
