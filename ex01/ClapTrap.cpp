@@ -3,7 +3,7 @@
 #include <iostream>
 
 ClapTrap::ClapTrap(void) : name("default"), hit_points(10), energy_points(10), attack_damage(0) {
-    std::cout << "ClapTrap " << this->name << " default constructor called" << std::endl;
+    std::cout << "ClapTrap " << "default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string& name) : name(name), hit_points(10), energy_points(10), attack_damage(0) {
@@ -11,7 +11,7 @@ ClapTrap::ClapTrap(const std::string& name) : name(name), hit_points(10), energy
 }
 
 ClapTrap::ClapTrap(const ClapTrap& src) {
-    std::cout << "ClapTrap " << this->name << " copy constructor called" << std::endl;
+    std::cout << "ClapTrap " << this->name << "copy constructor called" << std::endl;
     *this = src;
 }
 
