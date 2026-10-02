@@ -12,11 +12,12 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
     hit_points = 100;
     energy_points = 50;
     attack_damage = 20;
-    std::cout << "ScavTrap " << name << " constructor called" << std::endl;
+    std::cout << "ScavTrap " << name <<" custom constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src) {
+ScavTrap::ScavTrap(const ScavTrap& src) {
     std::cout << "ScavTrap " << name << " copy constructor called" << std::endl;
+    *this = src;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& src) {

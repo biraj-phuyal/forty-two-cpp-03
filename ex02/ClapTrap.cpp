@@ -6,12 +6,12 @@ ClapTrap::ClapTrap(void) : name("default"), hit_points(10), energy_points(10), a
 }
 
 ClapTrap::ClapTrap(const std::string& name) : name(name), hit_points(10), energy_points(10), attack_damage(0) {
-    std::cout << "ClapTrap " << this->name << " constructor called" << std::endl;
+    std::cout << "ClapTrap " << this->name <<" custom constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& src) : name(src.name), hit_points(src.hit_points), energy_points(src.energy_points),
-                                        attack_damage(src.attack_damage) {
+ClapTrap::ClapTrap(const ClapTrap& src) {
     std::cout << "ClapTrap " << this->name << " copy constructor called" << std::endl;
+    *this = src;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& src) {
